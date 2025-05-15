@@ -8,7 +8,7 @@
             <sparkle:version>1.5.0</sparkle:version>
             <sparkle:shortVersionString>1.5.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>11.0</sparkle:minimumSystemVersion>
-            <enclosure url="DigeHealth%20Researcher.zip" length="67891707" type="application/octet-stream"/>
+            <enclosure url="https://github.com/DigeHealth/digeresearcherbuild/blob/main/DigeHealth%20Researcher.zip" length="67891707" type="application/octet-stream"/>
         </item>
     </channel>
 </rss>
