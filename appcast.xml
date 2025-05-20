@@ -8,7 +8,7 @@
             <sparkle:version>1.7.0</sparkle:version>
             <sparkle:shortVersionString>1.7.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>11.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://raw.githubusercontent.com/DigeHealth/digeresearcherbuild/refs/heads/main/DigeHealth Researcher.zip" length="48007014" type="application/octet-stream" sparkle:edSignature="TPQa/L86ngUP3VWGE5IUQdLFgaFaEeXkz3breDywwUTkCOBFfqPWFUoHJQ9E1oaxiqa0cFf4IhFDIyvUA5b/Aw=="/>
+            <enclosure url="https://raw.githubusercontent.com/DigeHealth/digeresearcherbuild/refs/heads/main/DigeHealth%20Researcher.zip" length="48007014" type="application/octet-stream" sparkle:edSignature="TPQa/L86ngUP3VWGE5IUQdLFgaFaEeXkz3breDywwUTkCOBFfqPWFUoHJQ9E1oaxiqa0cFf4IhFDIyvUA5b/Aw=="/>
         </item>
     </channel>
 </rss>
