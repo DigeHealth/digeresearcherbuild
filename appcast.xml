@@ -5,10 +5,11 @@
         <item>
             <title>2.0.0</title>
             <pubDate>Thu, 15 May 2025 12:21:37 +0300</pubDate>
+            <sparkle:edSignature>TPQa/L86ngUP3VWGE5IUQdLFgaFaEeXkz3breDywwUTkCOBFfqPWFUoHJQ9E1oaxiqa0cFf4IhFDIyvUA5b/Aw==</sparkle:edSignature>
             <sparkle:version>2.0.0</sparkle:version>
             <sparkle:shortVersionString>2.0.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>11.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/DigeHealth/digeresearcherbuild/raw/refs/heads/main/DigeHealth%20Researcher.zip" length="61317744" type="application/octet-stream"/>
+            <enclosure url="https://github.com/DigeHealth/digeresearcherbuild/raw/refs/heads/main/DigeHealth%20Researcher.zip" length="48007014" type="application/octet-stream"/>
         </item>
     </channel>
 </rss>
