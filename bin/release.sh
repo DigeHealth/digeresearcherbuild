@@ -21,9 +21,12 @@ fi
 # Create the archive
 (cd "$APP_DIR"; zip -r --symlinks "$WORKING_DIR/$ARCHIVE_FILE" "$APP_FILE")
 
+# Remove the old appcast.xml 
+rm -f appcast.xml
+
 # sign the update
-SIGN_SIGNATURE_OUTPUT=$(cd "$WORKING_DIR/../digeresearcher/macos/Pods/Sparkle/"; ./bin/sign_update "$WORKING_DIR/$ARCHIVE_FILE")
-(cd "$WORKING_DIR/../digeresearcher/macos/Pods/Sparkle/"; ./bin/generate_appcast "$WORKING_DIR")
+SIGN_SIGNATURE_OUTPUT=$(./bin/sign_update "$WORKING_DIR/$ARCHIVE_FILE")
+(./bin/generate_appcast "$WORKING_DIR")
 
 # get from the appcast.xml the version number of a correct commit message
 VERSION="$(sed -n 's|<sparkle:version>\(.*\)</sparkle:version>|\1|p' appcast.xml | xargs)"
