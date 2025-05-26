@@ -18,11 +18,13 @@ if [ ! -d "$APP_PATH" ]; then
   exit
 fi
 
+# Remove the old appcast.xml 
+rm -f appcast.xml
+
 # Create the archive
 (cd "$APP_DIR"; zip -r --symlinks "$WORKING_DIR/$ARCHIVE_FILE" "$APP_FILE")
 
-# Remove the old appcast.xml 
-rm -f appcast.xml
+sleep 10s
 
 # sign the update
 SIGN_SIGNATURE_OUTPUT=$(./bin/sign_update "$WORKING_DIR/$ARCHIVE_FILE")
