@@ -1,5 +1,5 @@
 #!/bin/bash
-# gh auth login
+gh auth login
 
 [ "$#" -eq 1 ] || die "1 argument required, $# provided"
 
@@ -64,7 +64,7 @@ gh release create "v$VERSION" \
 
 echo "✅ Release v$VERSION created and archive uploaded."
 
-# # # Push the new appcast to the repo
-# # git add .
-# # git commit -m "Release $VERSION"
-# # git push origin main
+# Push the new appcast to the repo
+git add .
+git commit -m "Release $VERSION"
+git push origin main
