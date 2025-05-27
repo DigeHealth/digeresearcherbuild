@@ -24,12 +24,12 @@ rm -f appcast.xml
 # Create the archive
 (cd "$APP_DIR"; zip -r --symlinks "$WORKING_DIR/$ARCHIVE_FILE" "$APP_FILE")
 
-sleep 10s
+sleep 5s
 
 # sign the update
 SIGN_SIGNATURE_OUTPUT=$(./bin/sign_update "$WORKING_DIR/$ARCHIVE_FILE")
 (./bin/generate_appcast "$WORKING_DIR")
-
+sleep 5s
 # get from the appcast.xml the version number of a correct commit message
 VERSION="$(sed -n 's|<sparkle:version>\(.*\)</sparkle:version>|\1|p' appcast.xml | xargs)"
 SPARKLE_SIGNATURE="$(grep "sparkle:edSignature=" appcast.xml | awk -F 'sparkle:edSignature="' '{print $2}' | awk -F '"' '{print $1}')"
