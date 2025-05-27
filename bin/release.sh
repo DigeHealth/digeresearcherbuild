@@ -1,5 +1,5 @@
 #!/bin/bash
-gh auth login
+# gh auth login
 
 [ "$#" -eq 1 ] || die "1 argument required, $# provided"
 
@@ -7,6 +7,7 @@ APP_PATH=$1
 APP_DIR="$(dirname "$APP_PATH")"
 APP_FILE="$(basename "$APP_PATH")"
 ARCHIVE_FILE=${APP_FILE//.app/.zip}
+ARCHIVE_FILE=${ARCHIVE_FILE// /\.}
 WORKING_DIR="$(pwd)"
 
 if [[ ! "$APP_PATH" =~ \.app$ ]]; then
@@ -55,11 +56,6 @@ if [ "$SPARKLE_SIGNATURE" != "$SIGN_SIGNATURE" ]; then
   exit
 fi
 
-# Push the new appcast to the repo
-git add .
-git commit -m "Release $VERSION"
-git push origin main
-
 # Create GitHub release and upload asset
 gh release create "v$VERSION" \
   --title "Version $VERSION" \
@@ -67,3 +63,8 @@ gh release create "v$VERSION" \
   "$ARCHIVE_FILE"
 
 echo "✅ Release v$VERSION created and archive uploaded."
+
+# # # Push the new appcast to the repo
+# # git add .
+# # git commit -m "Release $VERSION"
+# # git push origin main
