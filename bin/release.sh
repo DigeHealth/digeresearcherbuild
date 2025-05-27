@@ -29,11 +29,17 @@ sleep 5s
 # sign the update
 SIGN_SIGNATURE_OUTPUT=$(./bin/sign_update "$WORKING_DIR/$ARCHIVE_FILE")
 (./bin/generate_appcast "$WORKING_DIR")
-sleep 5s
-# get from the appcast.xml the version number of a correct commit message
+sleep 10s
+
+
+# # get from the appcast.xml the version number of a correct commit message
 VERSION="$(sed -n 's|<sparkle:version>\(.*\)</sparkle:version>|\1|p' appcast.xml | xargs)"
 SPARKLE_SIGNATURE="$(grep "sparkle:edSignature=" appcast.xml | awk -F 'sparkle:edSignature="' '{print $2}' | awk -F '"' '{print $1}')"
 SIGN_SIGNATURE="$(echo $SIGN_SIGNATURE_OUTPUT | awk -F 'sparkle:edSignature="' '{print $2}' | awk -F '"' '{print $1}')"
+
+ENCLOSURE_URL="https://github.com/DigeHealth/digeresearcherbuild/releases/download/v$VERSION/$ARCHIVE_FILE"
+
+sed -i '' "s|<enclosure url=\"[^\"]*\"|<enclosure url=\"$ENCLOSURE_URL\"|" appcast.xml
 
 if [ "$SPARKLE_SIGNATURE" != "$SIGN_SIGNATURE" ]; then
   echo ""
@@ -48,6 +54,15 @@ if [ "$SPARKLE_SIGNATURE" != "$SIGN_SIGNATURE" ]; then
   exit
 fi
 
+# Push the new appcast to the repo
 git add .
 git commit -m "Release $VERSION"
 git push origin main
+
+# Create GitHub release and upload asset
+gh release create "v$VERSION" \
+  --title "Version $VERSION" \
+  --notes "Auto-generated release for version $VERSION." \
+  "$ARCHIVE_FILE"
+
+echo "✅ Release v$VERSION created and archive uploaded."
