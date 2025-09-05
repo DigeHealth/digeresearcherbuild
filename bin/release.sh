@@ -1,5 +1,5 @@
 #!/bin/bash
-gh auth login
+#gh auth login
 
 [ "$#" -eq 1 ] || die "1 argument required, $# provided"
 
