@@ -4,11 +4,11 @@
         <title>DigeHealth Researcher</title>
         <item>
             <title>1.9.4</title>
-            <pubDate>Tue, 16 Sep 2025 17:00:48 +0200</pubDate>
+            <pubDate>Wed, 17 Sep 2025 10:22:01 +0200</pubDate>
             <sparkle:version>1.9.4</sparkle:version>
             <sparkle:shortVersionString>1.9.4</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>11.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/DigeHealth/digeresearcherbuild/releases/download/v1.9.4/DigeHealth.Researcher.zip" length="69510542" type="application/octet-stream" sparkle:edSignature="oqdBEPY0tqUFTFUsPOHYvpTedVLDZx/un/9RI7hpKmWaX5nSpNJf1QU9aaVQDxosB71mGWxlY6pMZAwyLu8VDQ=="/>
+            <enclosure url="https://github.com/DigeHealth/digeresearcherbuild/releases/download/v1.9.4/DigeHealth.Researcher.zip" length="69512799" type="application/octet-stream" sparkle:edSignature="sQlMLollkWXA4ehGnVrPEVFIp5EYJpwP07kGgg+JoEILkNLOJaKjIECJEJ137Ml11CM1zgaXklGJQkx4zfQdDw=="/>
         </item>
     </channel>
 </rss>
