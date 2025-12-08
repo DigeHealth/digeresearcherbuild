@@ -56,15 +56,32 @@ if [ "$SPARKLE_SIGNATURE" != "$SIGN_SIGNATURE" ]; then
   exit
 fi
 
-# Create GitHub release and upload asset
+# Create GitHub draft release and upload asset
 gh release create "v$VERSION" \
   --title "Version $VERSION" \
   --notes "Auto-generated release for version $VERSION." \
+  --draft \
   "$ARCHIVE_FILE"
 
-echo "✅ Release v$VERSION created and archive uploaded."
+echo "✅ Draft release v$VERSION created and archive uploaded."
+echo "Check the release details:"
+gh release view "v$VERSION"
 
-# Push the new appcast to the repo
-git add .
-git commit -m "Release $VERSION"
-git push origin main
+# Prompt to confirm publishing
+read -p "Do you want to publish this release? (y/n): " CONFIRM
+
+if [[ "$CONFIRM" =~ ^[Yy]$ ]]; then
+    # Publish the release
+    gh release edit "v$VERSION" --publish
+    echo "✅ Release v$VERSION published ✅"
+
+    # Push the new appcast to the repo
+    git add .
+    git commit -m "Release $VERSION"
+    git push origin main
+
+else
+    # Delete the draft release
+    gh release delete "v$VERSION" --yes
+    echo "✅ Draft release v$VERSION deleted ✅"
+fi
