@@ -72,7 +72,7 @@ read -p "Do you want to publish this release? (y/n): " CONFIRM
 
 if [[ "$CONFIRM" =~ ^[Yy]$ ]]; then
     # Publish the release
-    gh release edit "v$VERSION" --publish
+    gh release edit "v$VERSION" --latest --draft=false
     echo "✅ Release v$VERSION published ✅"
 
     # Push the new appcast to the repo
