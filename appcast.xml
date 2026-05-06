@@ -3,12 +3,12 @@
     <channel>
         <title>DigeHealth Researcher</title>
         <item>
-            <title>2.5.2</title>
-            <pubDate>Thu, 30 Apr 2026 11:31:11 +0000</pubDate>
-            <sparkle:version>2.5.2</sparkle:version>
-            <sparkle:shortVersionString>2.5.2</sparkle:shortVersionString>
+            <title>2.5.3</title>
+            <pubDate>Wed, 06 May 2026 08:41:47 +0000</pubDate>
+            <sparkle:version>2.5.3</sparkle:version>
+            <sparkle:shortVersionString>2.5.3</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>11.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/DigeHealth/digeresearcherbuild/releases/download/v2.5.2/DigeHealth.Researcher.app.zip" length="292924507" type="application/octet-stream" sparkle:edSignature="f2KcwZsF+t7aXbEczxMUmAePaHUJn0MmeN6Oe683YDOhTgds78732smXYbe9G+Wji6pK33cJlRd14A6KSZ4XCw=="/>
+            <enclosure url="https://github.com/DigeHealth/digeresearcherbuild/releases/download/v2.5.3/DigeHealth.Researcher.app.zip" length="292939454" type="application/octet-stream" sparkle:edSignature="LGKhBXKtAiv1aBFSPU+HwW9BcgEVh8eQG+Z0W7zSs0FoFXjT2bpuObJC3V/He/6r4MdY+51/Lhxm+mJsbkIMDA=="/>
         </item>
     </channel>
 </rss>
