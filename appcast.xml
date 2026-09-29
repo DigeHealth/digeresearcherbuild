@@ -4,11 +4,11 @@
         <title>DigeHealth Researcher</title>
         <item>
             <title>2.6.2</title>
-            <pubDate>Wed, 16 Sep 2026 15:20:14 +0000</pubDate>
+            <pubDate>Tue, 29 Sep 2026 09:49:36 +0000</pubDate>
             <sparkle:version>2.6.2</sparkle:version>
             <sparkle:shortVersionString>2.6.2</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/DigeHealth/digeresearcherbuild/releases/download/v2.6.2/DigeHealth.Researcher.app.zip" length="267997831" type="application/octet-stream" sparkle:edSignature="ArAFMbTjtk3WsZBFGzPfvBscUhY78P+4i0zE+43PZl4mc5GxYQc7RMmLdr4Id3DPP7rbWhP/Jo9hb639PLq2Dg=="/>
+            <enclosure url="https://github.com/DigeHealth/digeresearcherbuild/releases/download/v2.6.2/DigeHealth.Researcher.app.zip" length="267998006" type="application/octet-stream" sparkle:edSignature="DXJcKked8jtIe0qaZe9kJQXD3D0IJr1TOknV38A9RDgUL+LtmUO3e3zvOfkj3htJ6RJsrtbB6Hcd0GEdPIALBg=="/>
         </item>
     </channel>
 </rss>
